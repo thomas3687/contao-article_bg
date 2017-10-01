@@ -1,5 +1,5 @@
 {
-    "name": "tbilich/tb_article_bg",
+    "name": "thomas3687/contao-article_bg",
     "description":"Set a background image or a color for article elements in Contao",
     "keywords":["contao", "article", "background"],
     "type": "contao-module",
@@ -11,12 +11,14 @@
     ],
     "require": {
         "php": ">=5.3",
-        "contao/core-bundle": ">=4.3"
+        "contao/core-bundle": ">=4.3",
+        "contao/core-bundle": "^3.5.9 | ^4.2.0",
+        "contao-community-alliance/composer-plugin": "~2.4 | ~3.0"
     },
     "extra": {
         "contao": {
             "sources": {
-                "": "system/modules/tb_article_bg"
+                "": "system/modules/tb_atricle_bg"
             }
         }
     }

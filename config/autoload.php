@@ -5,8 +5,7 @@
  *
  * Copyright (c) 2005-2014 Leo Feyer
  *
- * @package tb_article_bg
- * @author  Thomas Bilich
+ * @package Tags
  * @link    https://contao.org
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
  */
@@ -17,7 +16,7 @@
  */
 ClassLoader::addNamespaces(array
 (
-	'tbilich\article_bg',
+	'AurealisBG',
 ));
 
 
@@ -44,7 +43,7 @@ ClassLoader::addClasses(array
 	'Contao\TagsNewsModel'           => 'system/modules/tags/models/TagsNewsModel.php',
 */
 	// Modules
-	'tbilich\article_bg\ModuleArticle'         => 'system/modules/tb_article_bg/modules/ModuleArticle.php',
+	'AurealisBG\ModuleArticle'         => 'system/modules/tb_atricle_bg/modules/ModuleArticle.php',
 /*	'Contao\ModuleEventlistTags'     => 'system/modules/tags/modules/ModuleEventlistTags.php',
 	'Contao\ModuleEventReaderTags'   => 'system/modules/tags/modules/ModuleEventReaderTags.php',
 	'Contao\ModuleFaqListTags'       => 'system/modules/tags/modules/ModuleFaqListTags.php',
@@ -66,6 +65,6 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'mod_article_bg'       => 'system/modules/tb_article_bg/templates',
+	'mod_article_bg'       => 'system/modules/tb_atricle_bg/templates',
 	
 ));
