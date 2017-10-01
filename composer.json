@@ -1,0 +1,23 @@
+{
+    "name": "tbilich/tb_article_bg",
+    "description":"Set a background image or a color for article elements in Contao",
+    "keywords":["contao", "article", "background"],
+    "type": "contao-module",
+    "license":"LGPL-3.0+",
+    "authors":[
+        {
+            "name":"Thomas Bilich"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "contao/core-bundle": ">=4.3"
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "": "system/modules/tb_article_bg"
+            }
+        }
+    }
+}
