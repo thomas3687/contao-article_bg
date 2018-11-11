@@ -80,7 +80,7 @@ class tl_article_bg extends tl_article
 $disabledObjects = deserialize($GLOBALS['TL_CONFIG']['disabledTagObjects'], true);
 if (!in_array('tl_article', $disabledObjects))
 {
-	$GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace("space", "space;{atricle_bg_layout},layout_full_width;{atricle_bg_legend},background_image,background_position, background_repeat, background_blur_radius, background_color", $GLOBALS['TL_DCA']['tl_article']['palettes']['default']);
+	$GLOBALS['TL_DCA']['tl_article']['palettes']['default'] = str_replace("keywords", "keywords;{atricle_bg_layout},layout_full_width;{atricle_bg_legend},background_image,background_position, background_repeat, background_blur_radius, background_color", $GLOBALS['TL_DCA']['tl_article']['palettes']['default']);
 	//$GLOBALS['TL_DCA']['tl_article']['palettes']['__selector__'][] = 'tags_showtags';
 	//$GLOBALS['TL_DCA']['tl_article']['subpalettes']['tags_showtags']    = 'tags_max_tags,tags_relevance,tags_jumpto';
 	//$GLOBALS['TL_DCA']['tl_article']['config']['ondelete_callback'][] = array('tl_article_tags', 'removeArticle');
