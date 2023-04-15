@@ -2,9 +2,9 @@
 
 /**
  * Contao Open Source CMS
- * 
+ *
  * Copyright (C) 2005-2012 Leo Feyer
- * 
+ *
  * @package Core
  * @link    http://contao.org
  * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
@@ -27,10 +27,10 @@ namespace AurealisBG;
  */
 class ModuleArticle extends \Contao\ModuleArticle
 {
-	
-	
+
+
  static function hex2rgb($hex) {
-   
+
    $hex = str_replace("#", "", $hex);
 
    if(strlen($hex) == 3) {
@@ -46,8 +46,8 @@ class ModuleArticle extends \Contao\ModuleArticle
    //return implode(",", $rgb); // returns the rgb values separated by commas
    return $rgb; // returns an array with the rgb values
 }
-	
-	
+
+
 	/**
 	 * Template
 	 * @var string
@@ -59,51 +59,51 @@ class ModuleArticle extends \Contao\ModuleArticle
 	 */
 	protected function compile()
 	{
-			
+
 		\Contao\ModuleArticle::compile();
-		
+
 		//HINTERGRUNDFARBE
-		
-		
+
+
 		if(strlen($this->background_color)>0){
-		$bg_color = deserialize($this->background_color);
-		
+		$bg_color = deserialize(str_replace($this->background_color,'"',''));
+
 		$rgb = ModuleArticle::hex2rgb($bg_color[0]);
 		if($bg_color[1] < 100 && strlen($bg_color[1])>0){
 		$this->Template->background_color = "background-color: #".$bg_color[0]."; background-color: rgba(".$rgb['0'].", ".$rgb['1'].", ".$rgb['2'].", 0.".$bg_color[1]." ); ";
 		}else if(strlen($bg_color[0])>0){
-		$this->Template->background_color = "background-color: #".$bg_color[0]."; "; 	
+		$this->Template->background_color = "background-color: #".$bg_color[0]."; ";
 			}else{
-			$this->Template->background_color = null;	
+			$this->Template->background_color = null;
 				}
-		
+
 		}
-		
+
 		$this->Template->layout_full_width = $this->layout_full_width;
-		
+
 	/*	$this->Template->show_tags = $this->tags_showtags;
 		if ($this->tags_showtags)
 		{
 			$this->Template->tags = $this->getTagsForArticle($this->tags_max_tags, $this->tags_relevance, $this->tags_jumpto);
 		}
-		
+
 		*/
 	}
-	
-	
 
-	
-	
-	
+
+
+
+
+
 /*
 	public function sortByRelevance($a, $b)
 	{
-		if ($a['tagcount'] == $b['tagcount']) 
+		if ($a['tagcount'] == $b['tagcount'])
 		{
 			return 0;
 		}
 		return ($a['tagcount'] < $b['tagcount']) ? 1 : -1;
-	} 
+	}
 
 	private function getTagsForArticle($max_tags = 0, $relevance = 0, $target = 0)
 	{
