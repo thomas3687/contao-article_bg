@@ -66,7 +66,7 @@ class ModuleArticle extends \Contao\ModuleArticle
 
 
 		if(strlen($this->background_color)>0){
-		$bg_color = deserialize(str_replace($this->background_color,'"',''));
+		$bg_color = deserialize(str_replace('"','',$this->background_color));
 
 		$rgb = ModuleArticle::hex2rgb($bg_color[0]);
 		if($bg_color[1] < 100 && strlen($bg_color[1])>0){
